@@ -37,7 +37,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 className='titulo'>Encontre o endereço pelo CEP</h1>
-        <input className='campo-cep' placeholder='Digite o CEP' onChange={manipularEndereco}></input>
+        <input type='number' className='campo-cep' placeholder='Digite o CEP' onChange={manipularEndereco}></input>
         <ul className='lista-endereco'>
           <li>CEP: {endereco.cep}</li>
           <li>Rua: {endereco.rua}</li>
