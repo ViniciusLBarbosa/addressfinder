@@ -44,6 +44,11 @@
   justify-content: center;
   margin: 80px 50px;
 }
+
+.erro {
+  color: red;
+}
+
  .campo-cep {
   background: #F7F7F7;
   box-shadow: 10px 7px 15px rgba(0, 0, 0, 0.08);
