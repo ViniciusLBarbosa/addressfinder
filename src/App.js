@@ -51,20 +51,23 @@ function App() {
             })
           })
     }
-    
-
-
-
-    
   }
 
+  if(endereco.cepInexistente === 'true') {
+    setEndereco(cepNaoEncontrado => {
+      return{
+        ...cepNaoEncontrado,
+        cepInexistente: 'CEP não encontrado.'
+      }
+    })
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <h1 className='titulo'>Encontre o endereço pelo CEP</h1>
         <input type='number' required minlength="4" maxlength="8" className='campo-cep' placeholder='Digite o CEP' onChange={manipularEndereco}></input>
-        <h2 className='erro'>{endereco.error}</h2>
+        <h2 className='erro'>{endereco.error}{endereco.cepInexistente}</h2>
         <ul className='lista-endereco'>
           <li>CEP: {endereco.cep}</li>
           <li>Rua: {endereco.rua}</li>
